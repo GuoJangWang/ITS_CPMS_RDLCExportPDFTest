@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=192.168.100.81;Initial Catalog=PAYTPDB_PingTung;Persist Security Info=True;User ID=sa;Password=html5!its" IsAppSettingsProperty="false" Modifier="Assembly" Name="PAYTPDB_PingTungConnectionString" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TransactionListsTableAdapter" GeneratorDataComponentClassName="TransactionListsTableAdapter" Name="TransactionLists" UserDataComponentName="TransactionListsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PAYTPDB_PingTungConnectionString" DbObjectName="PAYTPDB_PingTung.dbo.TransactionLists" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[TransactionLists] WHERE (([ListID] = @Original_ListID) AND ([ImportBatchNo] = @Original_ImportBatchNo) AND ([FileTransDate] = @Original_FileTransDate) AND ([ChannelGroupID] = @Original_ChannelGroupID) AND ((@IsNull_ChannelGroupName = 1 AND [ChannelGroupName] IS NULL) OR ([ChannelGroupName] = @Original_ChannelGroupName)) AND ([ChannelID] = @Original_ChannelID) AND ([ShortName] = @Original_ShortName) AND ([TradeNo] = @Original_TradeNo) AND ((@IsNull_ParkingLotID = 1 AND [ParkingLotID] IS NULL) OR ([ParkingLotID] = @Original_ParkingLotID)) AND ((@IsNull_CardLessID = 1 AND [CardLessID] IS NULL) OR ([CardLessID] = @Original_CardLessID)) AND ([PaymentID] = @Original_PaymentID) AND ((@IsNull_SubFeeNo = 1 AND [SubFeeNo] IS NULL) OR ([SubFeeNo] = @Original_SubFeeNo)) AND ([DepartmentID] = @Original_DepartmentID) AND ([DepartmentName] = @Original_DepartmentName) AND ([FeeID] = @Original_FeeID) AND ([FeeNo] = @Original_FeeNo) AND ([FeeItem] = @Original_FeeItem) AND ((@IsNull_HospitalID = 1 AND [HospitalID] IS NULL) OR ([HospitalID] = @Original_HospitalID)) AND ([HospitalName] = @Original_HospitalName) AND ((@IsNull_AccountNo = 1 AND [AccountNo] IS NULL) OR ([AccountNo] = @Original_AccountNo)) AND ([PaymentDate] = @Original_PaymentDate) AND ([Amount] = @Original_Amount) AND ([ChargeFeeType] = @Original_ChargeFeeType) AND ([ChargeFeeCalBase] = @Original_ChargeFeeCalBase) AND ([ChargeFee] = @Original_ChargeFee) AND ([RefundAmount] = @Original_RefundAmount) AND ([ReverseFlag] = @Original_ReverseFlag) AND ([AccountAmount] = @Original_AccountAmount) AND ([PayableAmount] = @Original_PayableAmount) AND ((@IsNull_CreateUserId = 1 AND [CreateUserId] IS NULL) OR ([CreateUserId] = @Original_CreateUserId)) AND ((@IsNull_CreateUser = 1 AND [CreateUser] IS NULL) OR ([CreateUser] = @Original_CreateUser)) AND ((@IsNull_CreateDate = 1 AND [CreateDate] IS NULL) OR ([CreateDate] = @Original_CreateDate)) AND ((@IsNull_ModiUserId = 1 AND [ModiUserId] IS NULL) OR ([ModiUserId] = @Original_ModiUserId)) AND ((@IsNull_ModiUser = 1 AND [ModiUser] IS NULL) OR ([ModiUser] = @Original_ModiUser)) AND ((@IsNull_ModiDate = 1 AND [ModiDate] IS NULL) OR ([ModiDate] = @Original_ModiDate)) AND ([FeeStatus] = @Original_FeeStatus) AND ((@IsNull_AccountDate = 1 AND [AccountDate] IS NULL) OR ([AccountDate] = @Original_AccountDate)) AND ([TransDate] = @Original_TransDate) AND ([ApplyCategory] = @Original_ApplyCategory) AND ([GovernmentID] = @Original_GovernmentID) AND ([GovernmentName] = @Original_GovernmentName) AND ((@IsNull_BankID = 1 AND [BankID] IS NULL) OR ([BankID] = @Original_BankID)) AND ((@IsNull_TransferOutAccountNo = 1 AND [TransferOutAccountNo] IS NULL) OR ([TransferOutAccountNo] = @Original_TransferOutAccountNo)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ListID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ListID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ImportBatchNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ImportBatchNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_FileTransDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FileTransDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChannelGroupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChannelGroupID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChannelGroupName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChannelGroupName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ChannelGroupName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChannelGroupName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ChannelID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChannelID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ShortName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ShortName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TradeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TradeNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ParkingLotID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParkingLotID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ParkingLotID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ParkingLotID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CardLessID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CardLessID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CardLessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CardLessID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PaymentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PaymentID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SubFeeNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SubFeeNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SubFeeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SubFeeNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DepartmentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DepartmentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_FeeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FeeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FeeItem" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeItem" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HospitalID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HospitalID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_HospitalID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HospitalID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_HospitalName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HospitalName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_AccountNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_PaymentDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PaymentDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Amount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Amount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChargeFeeType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChargeFeeType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChargeFeeCalBase" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChargeFeeCalBase" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ChargeFee" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ChargeFee" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_RefundAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RefundAmount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ReverseFlag" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReverseFlag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_AccountAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="AccountAmount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PayableAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PayableAmount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateUserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreateUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateUserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateUser" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CreateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreateUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_CreateDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModiUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiUserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ModiUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiUserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModiUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiUser" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ModiUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ModiUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModiDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ModiDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ModiDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_FeeStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeStatus" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_AccountDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="AccountDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_TransDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TransDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ApplyCategory" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApplyCategory" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GovernmentID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GovernmentID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_GovernmentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GovernmentName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BankID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BankID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_BankID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BankID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TransferOutAccountNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TransferOutAccountNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TransferOutAccountNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TransferOutAccountNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[TransactionLists] ([ListID], [ImportBatchNo], [FileTransDate], [ChannelGroupID], [ChannelGroupName], [ChannelID], [ShortName], [TradeNo], [ParkingLotID], [CardLessID], [PaymentID], [SubFeeNo], [DepartmentID], [DepartmentName], [FeeID], [FeeNo], [FeeItem], [HospitalID], [HospitalName], [AccountNo], [PaymentDate], [Amount], [ChargeFeeType], [ChargeFeeCalBase], [ChargeFee], [RefundAmount], [ReverseFlag], [AccountAmount], [PayableAmount], [CreateUserId], [CreateUser], [CreateDate], [ModiUserId], [ModiUser], [ModiDate], [FeeStatus], [AccountDate], [TransDate], [ApplyCategory], [GovernmentID], [GovernmentName], [BankID], [TransferOutAccountNo]) VALUES (@ListID, @ImportBatchNo, @FileTransDate, @ChannelGroupID, @ChannelGroupName, @ChannelID, @ShortName, @TradeNo, @ParkingLotID, @CardLessID, @PaymentID, @SubFeeNo, @DepartmentID, @DepartmentName, @FeeID, @FeeNo, @FeeItem, @HospitalID, @HospitalName, @AccountNo, @PaymentDate, @Amount, @ChargeFeeType, @ChargeFeeCalBase, @ChargeFee, @RefundAmount, @ReverseFlag, @AccountAmount, @PayableAmount, @CreateUserId, @CreateUser, @CreateDate, @ModiUserId, @ModiUser, @ModiDate, @FeeStatus, @AccountDate, @TransDate, @ApplyCategory, @GovernmentID, @GovernmentName, @BankID, @TransferOutAccountNo);
+SELECT ListID, ImportBatchNo, FileTransDate, ChannelGroupID, ChannelGroupName, ChannelID, ShortName, TradeNo, ParkingLotID, CardLessID, PaymentID, SubFeeNo, DepartmentID, DepartmentName, FeeID, FeeNo, FeeItem, HospitalID, HospitalName, AccountNo, PaymentDate, Amount, ChargeFeeType, ChargeFeeCalBase, ChargeFee, RefundAmount, ReverseFlag, AccountAmount, PayableAmount, CreateUserId, CreateUser, CreateDate, ModiUserId, ModiUser, ModiDate, FeeStatus, AccountDate, TransDate, ApplyCategory, GovernmentID, GovernmentName, BankID, TransferOutAccountNo FROM TransactionLists WHERE (ListID = @ListID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ListID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ListID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ImportBatchNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ImportBatchNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@FileTransDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FileTransDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChannelGroupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChannelGroupID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ChannelGroupName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChannelGroupName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ChannelID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChannelID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShortName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ShortName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TradeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TradeNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ParkingLotID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ParkingLotID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CardLessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CardLessID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PaymentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PaymentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SubFeeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SubFeeNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FeeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FeeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FeeItem" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeItem" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@HospitalID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HospitalID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@HospitalName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HospitalName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AccountNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@PaymentDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PaymentDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Amount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChargeFeeType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChargeFeeType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChargeFeeCalBase" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChargeFeeCalBase" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ChargeFee" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ChargeFee" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@RefundAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RefundAmount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ReverseFlag" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReverseFlag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@AccountAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="AccountAmount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PayableAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PayableAmount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreateUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateUserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CreateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreateUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ModiUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiUserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ModiUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ModiUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ModiDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ModiDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FeeStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeStatus" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@AccountDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="AccountDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@TransDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TransDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ApplyCategory" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApplyCategory" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GovernmentID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GovernmentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GovernmentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GovernmentName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@BankID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BankID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TransferOutAccountNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TransferOutAccountNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ListID, ImportBatchNo, FileTransDate, ChannelGroupID, ChannelGroupName, ChannelID, ShortName, TradeNo, ParkingLotID, CardLessID, PaymentID, SubFeeNo, DepartmentID, DepartmentName, FeeID, FeeNo, FeeItem, HospitalID, HospitalName, AccountNo, PaymentDate, Amount, ChargeFeeType, ChargeFeeCalBase, ChargeFee, RefundAmount, ReverseFlag, AccountAmount, PayableAmount, CreateUserId, CreateUser, CreateDate, ModiUserId, ModiUser, ModiDate, FeeStatus, AccountDate, TransDate, ApplyCategory, GovernmentID, GovernmentName, BankID, TransferOutAccountNo FROM dbo.TransactionLists</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[TransactionLists] SET [ListID] = @ListID, [ImportBatchNo] = @ImportBatchNo, [FileTransDate] = @FileTransDate, [ChannelGroupID] = @ChannelGroupID, [ChannelGroupName] = @ChannelGroupName, [ChannelID] = @ChannelID, [ShortName] = @ShortName, [TradeNo] = @TradeNo, [ParkingLotID] = @ParkingLotID, [CardLessID] = @CardLessID, [PaymentID] = @PaymentID, [SubFeeNo] = @SubFeeNo, [DepartmentID] = @DepartmentID, [DepartmentName] = @DepartmentName, [FeeID] = @FeeID, [FeeNo] = @FeeNo, [FeeItem] = @FeeItem, [HospitalID] = @HospitalID, [HospitalName] = @HospitalName, [AccountNo] = @AccountNo, [PaymentDate] = @PaymentDate, [Amount] = @Amount, [ChargeFeeType] = @ChargeFeeType, [ChargeFeeCalBase] = @ChargeFeeCalBase, [ChargeFee] = @ChargeFee, [RefundAmount] = @RefundAmount, [ReverseFlag] = @ReverseFlag, [AccountAmount] = @AccountAmount, [PayableAmount] = @PayableAmount, [CreateUserId] = @CreateUserId, [CreateUser] = @CreateUser, [CreateDate] = @CreateDate, [ModiUserId] = @ModiUserId, [ModiUser] = @ModiUser, [ModiDate] = @ModiDate, [FeeStatus] = @FeeStatus, [AccountDate] = @AccountDate, [TransDate] = @TransDate, [ApplyCategory] = @ApplyCategory, [GovernmentID] = @GovernmentID, [GovernmentName] = @GovernmentName, [BankID] = @BankID, [TransferOutAccountNo] = @TransferOutAccountNo WHERE (([ListID] = @Original_ListID) AND ([ImportBatchNo] = @Original_ImportBatchNo) AND ([FileTransDate] = @Original_FileTransDate) AND ([ChannelGroupID] = @Original_ChannelGroupID) AND ((@IsNull_ChannelGroupName = 1 AND [ChannelGroupName] IS NULL) OR ([ChannelGroupName] = @Original_ChannelGroupName)) AND ([ChannelID] = @Original_ChannelID) AND ([ShortName] = @Original_ShortName) AND ([TradeNo] = @Original_TradeNo) AND ((@IsNull_ParkingLotID = 1 AND [ParkingLotID] IS NULL) OR ([ParkingLotID] = @Original_ParkingLotID)) AND ((@IsNull_CardLessID = 1 AND [CardLessID] IS NULL) OR ([CardLessID] = @Original_CardLessID)) AND ([PaymentID] = @Original_PaymentID) AND ((@IsNull_SubFeeNo = 1 AND [SubFeeNo] IS NULL) OR ([SubFeeNo] = @Original_SubFeeNo)) AND ([DepartmentID] = @Original_DepartmentID) AND ([DepartmentName] = @Original_DepartmentName) AND ([FeeID] = @Original_FeeID) AND ([FeeNo] = @Original_FeeNo) AND ([FeeItem] = @Original_FeeItem) AND ((@IsNull_HospitalID = 1 AND [HospitalID] IS NULL) OR ([HospitalID] = @Original_HospitalID)) AND ([HospitalName] = @Original_HospitalName) AND ((@IsNull_AccountNo = 1 AND [AccountNo] IS NULL) OR ([AccountNo] = @Original_AccountNo)) AND ([PaymentDate] = @Original_PaymentDate) AND ([Amount] = @Original_Amount) AND ([ChargeFeeType] = @Original_ChargeFeeType) AND ([ChargeFeeCalBase] = @Original_ChargeFeeCalBase) AND ([ChargeFee] = @Original_ChargeFee) AND ([RefundAmount] = @Original_RefundAmount) AND ([ReverseFlag] = @Original_ReverseFlag) AND ([AccountAmount] = @Original_AccountAmount) AND ([PayableAmount] = @Original_PayableAmount) AND ((@IsNull_CreateUserId = 1 AND [CreateUserId] IS NULL) OR ([CreateUserId] = @Original_CreateUserId)) AND ((@IsNull_CreateUser = 1 AND [CreateUser] IS NULL) OR ([CreateUser] = @Original_CreateUser)) AND ((@IsNull_CreateDate = 1 AND [CreateDate] IS NULL) OR ([CreateDate] = @Original_CreateDate)) AND ((@IsNull_ModiUserId = 1 AND [ModiUserId] IS NULL) OR ([ModiUserId] = @Original_ModiUserId)) AND ((@IsNull_ModiUser = 1 AND [ModiUser] IS NULL) OR ([ModiUser] = @Original_ModiUser)) AND ((@IsNull_ModiDate = 1 AND [ModiDate] IS NULL) OR ([ModiDate] = @Original_ModiDate)) AND ([FeeStatus] = @Original_FeeStatus) AND ((@IsNull_AccountDate = 1 AND [AccountDate] IS NULL) OR ([AccountDate] = @Original_AccountDate)) AND ([TransDate] = @Original_TransDate) AND ([ApplyCategory] = @Original_ApplyCategory) AND ([GovernmentID] = @Original_GovernmentID) AND ([GovernmentName] = @Original_GovernmentName) AND ((@IsNull_BankID = 1 AND [BankID] IS NULL) OR ([BankID] = @Original_BankID)) AND ((@IsNull_TransferOutAccountNo = 1 AND [TransferOutAccountNo] IS NULL) OR ([TransferOutAccountNo] = @Original_TransferOutAccountNo)));
+SELECT ListID, ImportBatchNo, FileTransDate, ChannelGroupID, ChannelGroupName, ChannelID, ShortName, TradeNo, ParkingLotID, CardLessID, PaymentID, SubFeeNo, DepartmentID, DepartmentName, FeeID, FeeNo, FeeItem, HospitalID, HospitalName, AccountNo, PaymentDate, Amount, ChargeFeeType, ChargeFeeCalBase, ChargeFee, RefundAmount, ReverseFlag, AccountAmount, PayableAmount, CreateUserId, CreateUser, CreateDate, ModiUserId, ModiUser, ModiDate, FeeStatus, AccountDate, TransDate, ApplyCategory, GovernmentID, GovernmentName, BankID, TransferOutAccountNo FROM TransactionLists WHERE (ListID = @ListID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ListID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ListID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ImportBatchNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ImportBatchNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@FileTransDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FileTransDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChannelGroupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChannelGroupID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ChannelGroupName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChannelGroupName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ChannelID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChannelID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ShortName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ShortName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TradeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TradeNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ParkingLotID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ParkingLotID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CardLessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CardLessID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PaymentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PaymentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SubFeeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SubFeeNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FeeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FeeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FeeItem" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeItem" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@HospitalID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HospitalID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@HospitalName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HospitalName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AccountNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@PaymentDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PaymentDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Amount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChargeFeeType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChargeFeeType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ChargeFeeCalBase" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChargeFeeCalBase" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ChargeFee" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ChargeFee" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@RefundAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RefundAmount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ReverseFlag" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReverseFlag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@AccountAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="AccountAmount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PayableAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PayableAmount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CreateUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateUserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CreateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreateUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ModiUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiUserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ModiUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ModiUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ModiDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ModiDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FeeStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeStatus" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@AccountDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="AccountDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@TransDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TransDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ApplyCategory" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApplyCategory" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GovernmentID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GovernmentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GovernmentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GovernmentName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@BankID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BankID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TransferOutAccountNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TransferOutAccountNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ListID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ListID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ImportBatchNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ImportBatchNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_FileTransDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FileTransDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChannelGroupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChannelGroupID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChannelGroupName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChannelGroupName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ChannelGroupName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChannelGroupName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ChannelID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChannelID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ShortName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ShortName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TradeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TradeNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ParkingLotID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParkingLotID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ParkingLotID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ParkingLotID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CardLessID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CardLessID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CardLessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CardLessID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PaymentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PaymentID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SubFeeNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SubFeeNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SubFeeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SubFeeNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DepartmentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DepartmentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_FeeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FeeNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FeeItem" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeItem" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HospitalID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HospitalID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_HospitalID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HospitalID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_HospitalName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HospitalName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_AccountNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_PaymentDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="PaymentDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Amount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Amount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChargeFeeType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChargeFeeType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ChargeFeeCalBase" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChargeFeeCalBase" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ChargeFee" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ChargeFee" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_RefundAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RefundAmount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ReverseFlag" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReverseFlag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_AccountAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="AccountAmount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PayableAmount" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PayableAmount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateUserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CreateUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateUserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateUser" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CreateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreateUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_CreateDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModiUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiUserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ModiUserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiUserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModiUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiUser" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ModiUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ModiUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModiDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModiDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ModiDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ModiDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_FeeStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeStatus" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_AccountDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="AccountDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_TransDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TransDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ApplyCategory" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApplyCategory" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GovernmentID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GovernmentID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_GovernmentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GovernmentName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BankID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BankID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_BankID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BankID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TransferOutAccountNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TransferOutAccountNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TransferOutAccountNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TransferOutAccountNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ListID" DataSetColumn="ListID" />
+              <Mapping SourceColumn="ImportBatchNo" DataSetColumn="ImportBatchNo" />
+              <Mapping SourceColumn="FileTransDate" DataSetColumn="FileTransDate" />
+              <Mapping SourceColumn="ChannelGroupID" DataSetColumn="ChannelGroupID" />
+              <Mapping SourceColumn="ChannelGroupName" DataSetColumn="ChannelGroupName" />
+              <Mapping SourceColumn="ChannelID" DataSetColumn="ChannelID" />
+              <Mapping SourceColumn="ShortName" DataSetColumn="ShortName" />
+              <Mapping SourceColumn="TradeNo" DataSetColumn="TradeNo" />
+              <Mapping SourceColumn="ParkingLotID" DataSetColumn="ParkingLotID" />
+              <Mapping SourceColumn="CardLessID" DataSetColumn="CardLessID" />
+              <Mapping SourceColumn="PaymentID" DataSetColumn="PaymentID" />
+              <Mapping SourceColumn="SubFeeNo" DataSetColumn="SubFeeNo" />
+              <Mapping SourceColumn="DepartmentID" DataSetColumn="DepartmentID" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="FeeID" DataSetColumn="FeeID" />
+              <Mapping SourceColumn="FeeNo" DataSetColumn="FeeNo" />
+              <Mapping SourceColumn="FeeItem" DataSetColumn="FeeItem" />
+              <Mapping SourceColumn="HospitalID" DataSetColumn="HospitalID" />
+              <Mapping SourceColumn="HospitalName" DataSetColumn="HospitalName" />
+              <Mapping SourceColumn="AccountNo" DataSetColumn="AccountNo" />
+              <Mapping SourceColumn="PaymentDate" DataSetColumn="PaymentDate" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="ChargeFeeType" DataSetColumn="ChargeFeeType" />
+              <Mapping SourceColumn="ChargeFeeCalBase" DataSetColumn="ChargeFeeCalBase" />
+              <Mapping SourceColumn="ChargeFee" DataSetColumn="ChargeFee" />
+              <Mapping SourceColumn="RefundAmount" DataSetColumn="RefundAmount" />
+              <Mapping SourceColumn="ReverseFlag" DataSetColumn="ReverseFlag" />
+              <Mapping SourceColumn="AccountAmount" DataSetColumn="AccountAmount" />
+              <Mapping SourceColumn="PayableAmount" DataSetColumn="PayableAmount" />
+              <Mapping SourceColumn="CreateUserId" DataSetColumn="CreateUserId" />
+              <Mapping SourceColumn="CreateUser" DataSetColumn="CreateUser" />
+              <Mapping SourceColumn="CreateDate" DataSetColumn="CreateDate" />
+              <Mapping SourceColumn="ModiUserId" DataSetColumn="ModiUserId" />
+              <Mapping SourceColumn="ModiUser" DataSetColumn="ModiUser" />
+              <Mapping SourceColumn="ModiDate" DataSetColumn="ModiDate" />
+              <Mapping SourceColumn="FeeStatus" DataSetColumn="FeeStatus" />
+              <Mapping SourceColumn="AccountDate" DataSetColumn="AccountDate" />
+              <Mapping SourceColumn="TransDate" DataSetColumn="TransDate" />
+              <Mapping SourceColumn="ApplyCategory" DataSetColumn="ApplyCategory" />
+              <Mapping SourceColumn="GovernmentID" DataSetColumn="GovernmentID" />
+              <Mapping SourceColumn="GovernmentName" DataSetColumn="GovernmentName" />
+              <Mapping SourceColumn="BankID" DataSetColumn="BankID" />
+              <Mapping SourceColumn="TransferOutAccountNo" DataSetColumn="TransferOutAccountNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TransactionLists" msprop:Generator_RowEvHandlerName="TransactionListsRowChangeEventHandler" msprop:Generator_RowDeletedName="TransactionListsRowDeleted" msprop:Generator_RowDeletingName="TransactionListsRowDeleting" msprop:Generator_RowEvArgName="TransactionListsRowChangeEvent" msprop:Generator_TablePropName="TransactionLists" msprop:Generator_RowChangedName="TransactionListsRowChanged" msprop:Generator_RowChangingName="TransactionListsRowChanging" msprop:Generator_TableClassName="TransactionListsDataTable" msprop:Generator_RowClassName="TransactionListsRow" msprop:Generator_TableVarName="tableTransactionLists" msprop:Generator_UserTableName="TransactionLists">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ListID" msprop:Generator_ColumnPropNameInRow="ListID" msprop:Generator_ColumnPropNameInTable="ListIDColumn" msprop:Generator_ColumnVarNameInTable="columnListID" msprop:Generator_UserColumnName="ListID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ImportBatchNo" msprop:Generator_ColumnPropNameInRow="ImportBatchNo" msprop:Generator_ColumnPropNameInTable="ImportBatchNoColumn" msprop:Generator_ColumnVarNameInTable="columnImportBatchNo" msprop:Generator_UserColumnName="ImportBatchNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FileTransDate" msprop:Generator_ColumnPropNameInRow="FileTransDate" msprop:Generator_ColumnPropNameInTable="FileTransDateColumn" msprop:Generator_ColumnVarNameInTable="columnFileTransDate" msprop:Generator_UserColumnName="FileTransDate" type="xs:dateTime" />
+              <xs:element name="ChannelGroupID" msprop:Generator_ColumnPropNameInRow="ChannelGroupID" msprop:Generator_ColumnPropNameInTable="ChannelGroupIDColumn" msprop:Generator_ColumnVarNameInTable="columnChannelGroupID" msprop:Generator_UserColumnName="ChannelGroupID" type="xs:int" />
+              <xs:element name="ChannelGroupName" msprop:Generator_ColumnPropNameInRow="ChannelGroupName" msprop:Generator_ColumnPropNameInTable="ChannelGroupNameColumn" msprop:Generator_ColumnVarNameInTable="columnChannelGroupName" msprop:Generator_UserColumnName="ChannelGroupName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChannelID" msprop:Generator_ColumnPropNameInRow="ChannelID" msprop:Generator_ColumnPropNameInTable="ChannelIDColumn" msprop:Generator_ColumnVarNameInTable="columnChannelID" msprop:Generator_UserColumnName="ChannelID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_UserColumnName="ShortName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TradeNo" msprop:Generator_ColumnPropNameInRow="TradeNo" msprop:Generator_ColumnPropNameInTable="TradeNoColumn" msprop:Generator_ColumnVarNameInTable="columnTradeNo" msprop:Generator_UserColumnName="TradeNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParkingLotID" msprop:Generator_ColumnPropNameInRow="ParkingLotID" msprop:Generator_ColumnPropNameInTable="ParkingLotIDColumn" msprop:Generator_ColumnVarNameInTable="columnParkingLotID" msprop:Generator_UserColumnName="ParkingLotID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CardLessID" msprop:Generator_ColumnPropNameInRow="CardLessID" msprop:Generator_ColumnPropNameInTable="CardLessIDColumn" msprop:Generator_ColumnVarNameInTable="columnCardLessID" msprop:Generator_UserColumnName="CardLessID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentID" msprop:Generator_ColumnPropNameInRow="PaymentID" msprop:Generator_ColumnPropNameInTable="PaymentIDColumn" msprop:Generator_ColumnVarNameInTable="columnPaymentID" msprop:Generator_UserColumnName="PaymentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubFeeNo" msprop:Generator_ColumnPropNameInRow="SubFeeNo" msprop:Generator_ColumnPropNameInTable="SubFeeNoColumn" msprop:Generator_ColumnVarNameInTable="columnSubFeeNo" msprop:Generator_UserColumnName="SubFeeNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentID" msprop:Generator_ColumnPropNameInRow="DepartmentID" msprop:Generator_ColumnPropNameInTable="DepartmentIDColumn" msprop:Generator_ColumnVarNameInTable="columnDepartmentID" msprop:Generator_UserColumnName="DepartmentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_UserColumnName="DepartmentName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FeeID" msprop:Generator_ColumnPropNameInRow="FeeID" msprop:Generator_ColumnPropNameInTable="FeeIDColumn" msprop:Generator_ColumnVarNameInTable="columnFeeID" msprop:Generator_UserColumnName="FeeID" type="xs:int" />
+              <xs:element name="FeeNo" msprop:Generator_ColumnPropNameInRow="FeeNo" msprop:Generator_ColumnPropNameInTable="FeeNoColumn" msprop:Generator_ColumnVarNameInTable="columnFeeNo" msprop:Generator_UserColumnName="FeeNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FeeItem" msprop:Generator_ColumnPropNameInRow="FeeItem" msprop:Generator_ColumnPropNameInTable="FeeItemColumn" msprop:Generator_ColumnVarNameInTable="columnFeeItem" msprop:Generator_UserColumnName="FeeItem">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HospitalID" msprop:Generator_ColumnPropNameInRow="HospitalID" msprop:Generator_ColumnPropNameInTable="HospitalIDColumn" msprop:Generator_ColumnVarNameInTable="columnHospitalID" msprop:Generator_UserColumnName="HospitalID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HospitalName" msprop:Generator_ColumnPropNameInRow="HospitalName" msprop:Generator_ColumnPropNameInTable="HospitalNameColumn" msprop:Generator_ColumnVarNameInTable="columnHospitalName" msprop:Generator_UserColumnName="HospitalName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccountNo" msprop:Generator_ColumnPropNameInRow="AccountNo" msprop:Generator_ColumnPropNameInTable="AccountNoColumn" msprop:Generator_ColumnVarNameInTable="columnAccountNo" msprop:Generator_UserColumnName="AccountNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentDate" msprop:Generator_ColumnPropNameInRow="PaymentDate" msprop:Generator_ColumnPropNameInTable="PaymentDateColumn" msprop:Generator_ColumnVarNameInTable="columnPaymentDate" msprop:Generator_UserColumnName="PaymentDate" type="xs:dateTime" />
+              <xs:element name="Amount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_UserColumnName="Amount" type="xs:decimal" />
+              <xs:element name="ChargeFeeType" msprop:Generator_ColumnPropNameInRow="ChargeFeeType" msprop:Generator_ColumnPropNameInTable="ChargeFeeTypeColumn" msprop:Generator_ColumnVarNameInTable="columnChargeFeeType" msprop:Generator_UserColumnName="ChargeFeeType" type="xs:int" />
+              <xs:element name="ChargeFeeCalBase" msprop:Generator_ColumnPropNameInRow="ChargeFeeCalBase" msprop:Generator_ColumnPropNameInTable="ChargeFeeCalBaseColumn" msprop:Generator_ColumnVarNameInTable="columnChargeFeeCalBase" msprop:Generator_UserColumnName="ChargeFeeCalBase" type="xs:int" />
+              <xs:element name="ChargeFee" msprop:Generator_ColumnPropNameInRow="ChargeFee" msprop:Generator_ColumnPropNameInTable="ChargeFeeColumn" msprop:Generator_ColumnVarNameInTable="columnChargeFee" msprop:Generator_UserColumnName="ChargeFee" type="xs:decimal" />
+              <xs:element name="RefundAmount" msprop:Generator_ColumnPropNameInRow="RefundAmount" msprop:Generator_ColumnPropNameInTable="RefundAmountColumn" msprop:Generator_ColumnVarNameInTable="columnRefundAmount" msprop:Generator_UserColumnName="RefundAmount" type="xs:decimal" />
+              <xs:element name="ReverseFlag" msprop:Generator_ColumnPropNameInRow="ReverseFlag" msprop:Generator_ColumnPropNameInTable="ReverseFlagColumn" msprop:Generator_ColumnVarNameInTable="columnReverseFlag" msprop:Generator_UserColumnName="ReverseFlag" type="xs:int" />
+              <xs:element name="AccountAmount" msprop:Generator_ColumnPropNameInRow="AccountAmount" msprop:Generator_ColumnPropNameInTable="AccountAmountColumn" msprop:Generator_ColumnVarNameInTable="columnAccountAmount" msprop:Generator_UserColumnName="AccountAmount" type="xs:decimal" />
+              <xs:element name="PayableAmount" msprop:Generator_ColumnPropNameInRow="PayableAmount" msprop:Generator_ColumnPropNameInTable="PayableAmountColumn" msprop:Generator_ColumnVarNameInTable="columnPayableAmount" msprop:Generator_UserColumnName="PayableAmount" type="xs:decimal" />
+              <xs:element name="CreateUserId" msprop:Generator_ColumnPropNameInRow="CreateUserId" msprop:Generator_ColumnPropNameInTable="CreateUserIdColumn" msprop:Generator_ColumnVarNameInTable="columnCreateUserId" msprop:Generator_UserColumnName="CreateUserId" type="xs:int" minOccurs="0" />
+              <xs:element name="CreateUser" msprop:Generator_ColumnPropNameInRow="CreateUser" msprop:Generator_ColumnPropNameInTable="CreateUserColumn" msprop:Generator_ColumnVarNameInTable="columnCreateUser" msprop:Generator_UserColumnName="CreateUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ModiUserId" msprop:Generator_ColumnPropNameInRow="ModiUserId" msprop:Generator_ColumnPropNameInTable="ModiUserIdColumn" msprop:Generator_ColumnVarNameInTable="columnModiUserId" msprop:Generator_UserColumnName="ModiUserId" type="xs:int" minOccurs="0" />
+              <xs:element name="ModiUser" msprop:Generator_ColumnPropNameInRow="ModiUser" msprop:Generator_ColumnPropNameInTable="ModiUserColumn" msprop:Generator_ColumnVarNameInTable="columnModiUser" msprop:Generator_UserColumnName="ModiUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModiDate" msprop:Generator_ColumnPropNameInRow="ModiDate" msprop:Generator_ColumnPropNameInTable="ModiDateColumn" msprop:Generator_ColumnVarNameInTable="columnModiDate" msprop:Generator_UserColumnName="ModiDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FeeStatus" msprop:Generator_ColumnPropNameInRow="FeeStatus" msprop:Generator_ColumnPropNameInTable="FeeStatusColumn" msprop:Generator_ColumnVarNameInTable="columnFeeStatus" msprop:Generator_UserColumnName="FeeStatus" type="xs:int" />
+              <xs:element name="AccountDate" msprop:Generator_ColumnPropNameInRow="AccountDate" msprop:Generator_ColumnPropNameInTable="AccountDateColumn" msprop:Generator_ColumnVarNameInTable="columnAccountDate" msprop:Generator_UserColumnName="AccountDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TransDate" msprop:Generator_ColumnPropNameInRow="TransDate" msprop:Generator_ColumnPropNameInTable="TransDateColumn" msprop:Generator_ColumnVarNameInTable="columnTransDate" msprop:Generator_UserColumnName="TransDate" type="xs:dateTime" />
+              <xs:element name="ApplyCategory" msprop:Generator_ColumnPropNameInRow="ApplyCategory" msprop:Generator_ColumnPropNameInTable="ApplyCategoryColumn" msprop:Generator_ColumnVarNameInTable="columnApplyCategory" msprop:Generator_UserColumnName="ApplyCategory" type="xs:int" />
+              <xs:element name="GovernmentID" msprop:Generator_ColumnPropNameInRow="GovernmentID" msprop:Generator_ColumnPropNameInTable="GovernmentIDColumn" msprop:Generator_ColumnVarNameInTable="columnGovernmentID" msprop:Generator_UserColumnName="GovernmentID" type="xs:int" />
+              <xs:element name="GovernmentName" msprop:Generator_ColumnPropNameInRow="GovernmentName" msprop:Generator_ColumnPropNameInTable="GovernmentNameColumn" msprop:Generator_ColumnVarNameInTable="columnGovernmentName" msprop:Generator_UserColumnName="GovernmentName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankID" msprop:Generator_ColumnPropNameInRow="BankID" msprop:Generator_ColumnPropNameInTable="BankIDColumn" msprop:Generator_ColumnVarNameInTable="columnBankID" msprop:Generator_UserColumnName="BankID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransferOutAccountNo" msprop:Generator_ColumnPropNameInRow="TransferOutAccountNo" msprop:Generator_ColumnPropNameInTable="TransferOutAccountNoColumn" msprop:Generator_ColumnVarNameInTable="columnTransferOutAccountNo" msprop:Generator_UserColumnName="TransferOutAccountNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TransactionLists" />
+      <xs:field xpath="mstns:ListID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

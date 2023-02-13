@@ -11,21 +11,21 @@ try
 
     reports = DBLib_CPMS.GetDatas(10000);
 
-    var rdlcPath = @$"C:\VS\GitHub\RDLC_ExportTest\RDLC_ExportTest\Report1.rdlc";
+    var rdlcPath = @$"C:\VS\GitHub\RDLC_ExportTest\RDLC_ExportTest\RDLCTemp\CPMS.rdlc";
     var savePath = $"{AppDomain.CurrentDomain.BaseDirectory}File/Image{DateTime.Now.ToString("yyyyMMddHHmmssfff")}";
     ReportRDLC reportRDLC = new ReportRDLC(rdlcPath, savePath, ReportRDLC.FileType.Image);
 
 
     var datasetDic = new Dictionary<string, object>();
     //數據集1 “ReportModel”這個名字需要跟在rdlc模板裏定義好的名字相同
-    datasetDic.Add("TT1", reports);
+    datasetDic.Add("CPMS", reports);
 
 
     reportRDLC.DataSources = datasetDic;
 
     //自定義參數列表
     var paramList = new List<Microsoft.Reporting.NETCore.ReportParameter>();
-    paramList.Add(new Microsoft.Reporting.NETCore.ReportParameter("Title", "XXX報表"));//name 要與rdlc模板裏定義好的名字一樣
+    paramList.Add(new Microsoft.Reporting.NETCore.ReportParameter("Title", "CPMS測試報表"));//name 要與rdlc模板裏定義好的名字一樣
     reportRDLC.ReportParams = paramList;
 
     //reportRDLC.DeviceInfo = new ReportDeviceInfo { PageHeight = "10cm" };//定義報表頁面大小

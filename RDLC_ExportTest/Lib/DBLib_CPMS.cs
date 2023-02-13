@@ -1,6 +1,7 @@
 ﻿using RDLC_ExportTest.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace RDLC_ExportTest.Lib
             try
             {
                 string connectionString =
-            "Data Source=192.168.100.221;Initial Catalog=CPMSDB;persist security info=True;user id=cpms;password=cpms;MultipleActiveResultSets=True;TrustServerCertificate=True;";
+            "Data Source=192.168.100.221;Initial Catalog=CPMSDB;persist security info=True;user id=hncb;password=hncb;MultipleActiveResultSets=True;TrustServerCertificate=True;";
 
                 #region Query
                 string queryString =
@@ -52,26 +53,22 @@ namespace RDLC_ExportTest.Lib
                         {
                             //Console.WriteLine("\t{0}\t{1}\t{2}",
                             //    reader[0], reader[1], reader[2]);
-                            result.Add(new RDLCTestModel_CPMS()
-                            {
-                                ControlSetId = reader.GetInt64(1)
-,
-                                ReportConfigId = reader.GetInt32(2)
-,
-                                ReportId = reader.GetString(3)
-,
-                                ReportName = reader.GetString(4)
-,
-                                Message = reader.GetString(5)
-,
-                                DueDateStart = reader.GetDateTime(6)
-,
-                                DueDateEnd = reader.GetDateTime(7)
-,
-                                ResultFileName = reader.GetString(8)
-,
-                                FileName = reader.GetString(9)
-                            });
+
+                            var item = new RDLCTestModel_CPMS();
+
+                            item.ControlSetId = reader.IsDBNull(0)? null: reader?.GetInt64(0);
+
+                            item.ReportConfigId = reader.IsDBNull(1)? null: reader?.GetInt32(1);
+                            item.ReportId = reader.IsDBNull(2)? "": reader?.GetString(2);
+                            item.ReportName = reader.IsDBNull(3) ? "": reader?.GetString(3);
+                            item.Message = reader.IsDBNull(4)  ? "": reader?.GetString(4);
+                            item.DueDateStart = reader.IsDBNull(5) ? DateTime.MinValue: reader.GetDateTime(5);
+                            item.DueDateEnd = reader.IsDBNull(5) ? DateTime.MinValue : reader.GetDateTime(6);
+                            item.ResultFileName = reader.IsDBNull(7)? "": reader?.GetString(7);
+                            item.FileName = reader.IsDBNull(8)? "": reader?.GetString(8);
+
+
+                            result.Add(item);
                         }
                         reader.Close();
                     }

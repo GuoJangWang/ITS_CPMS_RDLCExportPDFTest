@@ -38,7 +38,7 @@ namespace RDLC_ExportTest.Models
         /// </summary>
         [Key]
         [Display(Name = "報表排程執行紀錄Id")]
-        public long ControlSetId { get; set; }
+        public long? ControlSetId { get; set; }
 
         /// <summary>
         /// 排程Id
@@ -110,7 +110,7 @@ namespace RDLC_ExportTest.Models
         /// </summary>
         [Display(Name = "執行狀態")]
         [Required]
-        public int ControlSetStatusenum { get; set; }
+        public int? ControlSetStatusenum { get; set; }
 
         /// <summary>
         /// 重試流程狀態

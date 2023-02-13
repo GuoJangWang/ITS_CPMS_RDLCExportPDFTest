@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CPMS" targetNamespace="http://tempuri.org/CPMS.xsd" xmlns:mstns="http://tempuri.org/CPMS.xsd" xmlns="http://tempuri.org/CPMS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CPMS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="CPMS" msprop:Generator_DataSetName="CPMS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportControlSet" msprop:Generator_RowEvHandlerName="ReportControlSetRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportControlSetRowDeleted" msprop:Generator_RowDeletingName="ReportControlSetRowDeleting" msprop:Generator_RowEvArgName="ReportControlSetRowChangeEvent" msprop:Generator_TablePropName="ReportControlSet" msprop:Generator_RowChangedName="ReportControlSetRowChanged" msprop:Generator_RowChangingName="ReportControlSetRowChanging" msprop:Generator_TableClassName="ReportControlSetDataTable" msprop:Generator_RowClassName="ReportControlSetRow" msprop:Generator_TableVarName="tableReportControlSet" msprop:Generator_UserTableName="ReportControlSet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ControlSetId" msprop:Generator_ColumnPropNameInRow="ControlSetId" msprop:Generator_ColumnPropNameInTable="ControlSetIdColumn" msprop:Generator_ColumnVarNameInTable="columnControlSetId" msprop:Generator_UserColumnName="ControlSetId" type="xs:string" minOccurs="0" />
+              <xs:element name="ReportConfigId" msprop:Generator_ColumnPropNameInRow="ReportConfigId" msprop:Generator_ColumnPropNameInTable="ReportConfigIdColumn" msprop:Generator_ColumnVarNameInTable="columnReportConfigId" msprop:Generator_UserColumnName="ReportConfigId" type="xs:string" minOccurs="0" />
+              <xs:element name="ReportId" msprop:Generator_ColumnPropNameInRow="ReportId" msprop:Generator_ColumnPropNameInTable="ReportIdColumn" msprop:Generator_ColumnVarNameInTable="columnReportId" msprop:Generator_UserColumnName="ReportId" type="xs:string" minOccurs="0" />
+              <xs:element name="ReportName" msprop:Generator_ColumnPropNameInRow="ReportName" msprop:Generator_ColumnPropNameInTable="ReportNameColumn" msprop:Generator_ColumnVarNameInTable="columnReportName" msprop:Generator_UserColumnName="ReportName" type="xs:string" minOccurs="0" />
+              <xs:element name="Message" msprop:Generator_ColumnPropNameInRow="Message" msprop:Generator_ColumnPropNameInTable="MessageColumn" msprop:Generator_ColumnVarNameInTable="columnMessage" msprop:Generator_UserColumnName="Message" type="xs:string" minOccurs="0" />
+              <xs:element name="DueDateStart" msprop:Generator_ColumnPropNameInRow="DueDateStart" msprop:Generator_ColumnPropNameInTable="DueDateStartColumn" msprop:Generator_ColumnVarNameInTable="columnDueDateStart" msprop:Generator_UserColumnName="DueDateStart" type="xs:string" minOccurs="0" />
+              <xs:element name="DueDateEnd" msprop:Generator_ColumnPropNameInRow="DueDateEnd" msprop:Generator_ColumnPropNameInTable="DueDateEndColumn" msprop:Generator_ColumnVarNameInTable="columnDueDateEnd" msprop:Generator_UserColumnName="DueDateEnd" type="xs:string" minOccurs="0" />
+              <xs:element name="ResultFileName" msprop:Generator_ColumnPropNameInRow="ResultFileName" msprop:Generator_ColumnPropNameInTable="ResultFileNameColumn" msprop:Generator_ColumnVarNameInTable="columnResultFileName" msprop:Generator_UserColumnName="ResultFileName" type="xs:string" minOccurs="0" />
+              <xs:element name="FileName" msprop:Generator_ColumnPropNameInRow="FileName" msprop:Generator_ColumnPropNameInTable="FileNameColumn" msprop:Generator_ColumnVarNameInTable="columnFileName" msprop:Generator_UserColumnName="FileName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

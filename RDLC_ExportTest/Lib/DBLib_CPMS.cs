@@ -9,21 +9,30 @@ using System.Threading.Tasks;
 
 namespace RDLC_ExportTest.Lib
 {
-    public static class DBLib
+    public static class DBLib_CPMS
     {
-        public static List<RDLCTestModel> GetDatas(int dataCount)
+        public static List<RDLCTestModel_CPMS> GetDatas(int dataCount)
         {
-            var result = new List<RDLCTestModel>();
+            var result = new List<RDLCTestModel_CPMS>();
             try
             {
                 string connectionString =
-            "Data Source=192.168.100.81;Initial Catalog=PAYTPDB_PingTung;persist security info=True;user id=sa;password=html5!its;MultipleActiveResultSets=True;TrustServerCertificate=True;";
+            "Data Source=192.168.100.221;Initial Catalog=CPMSDB;persist security info=True;user id=cpms;password=cpms;MultipleActiveResultSets=True;TrustServerCertificate=True;";
 
+                #region Query
                 string queryString =
-                $"SELECT TOP(@count)  [ListID] ,[AccountNo] ,[Amount]," +
-                $"[ChannelID],[TradeNo],[ShortName],[ParkingLotID],[PaymentID]," +
-                $"[DepartmentID],[DepartmentName],[HospitalID],[HospitalName]," +
-                $"[PaymentDate] from TransactionLists ";
+                $"SELECT TOP (5000) [ControlSetId]" +
+                $"      ,[ReportConfigId]" +
+                $"     ,[ReportId]" +
+                $"      ,[ReportName]" +
+                $"      ,[Message]" +
+                $"      ,[DueDateStart]" +
+                $"      ,[DueDateEnd]     " +
+                $" ,[ResultFileName]     " +
+                $" ,[FileName]     " +
+                $" FROM [CPMSDB].[dbo].[ReportControlSets] ";
+                #endregion
+
 
                 using (SqlConnection connection =
             new SqlConnection(connectionString))
@@ -43,20 +52,25 @@ namespace RDLC_ExportTest.Lib
                         {
                             //Console.WriteLine("\t{0}\t{1}\t{2}",
                             //    reader[0], reader[1], reader[2]);
-                            result.Add(new RDLCTestModel() {
-                                ListID = reader[0].ToString(), 
-                                AccountNo = reader[1].ToString(), 
-                                Amount = decimal.Parse(reader[2].ToString()),
-                            ChannelID = reader[3].ToString(),
-                            TradeNo = reader[4].ToString(),
-                            ShortName = reader[5].ToString(),
-                            ParkingLotID = reader[6].ToString(),
-                            PaymentID = reader[7].ToString(),
-                            DepartmentID = reader[8].ToString(),
-                            DepartmentName = reader[9].ToString(),
-                            HospitalID = reader[10].ToString(),
-                            HospitalName = reader[11].ToString(),
-                            PaymentDate = reader[12].ToString()
+                            result.Add(new RDLCTestModel_CPMS()
+                            {
+                                ControlSetId = reader.GetInt64(1)
+,
+                                ReportConfigId = reader.GetInt32(2)
+,
+                                ReportId = reader.GetString(3)
+,
+                                ReportName = reader.GetString(4)
+,
+                                Message = reader.GetString(5)
+,
+                                DueDateStart = reader.GetDateTime(6)
+,
+                                DueDateEnd = reader.GetDateTime(7)
+,
+                                ResultFileName = reader.GetString(8)
+,
+                                FileName = reader.GetString(9)
                             });
                         }
                         reader.Close();

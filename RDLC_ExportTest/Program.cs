@@ -7,9 +7,9 @@ try
 
     Console.WriteLine($"開始時間{DateTime.Now}");
 
-    List<RDLCTestModel> reports;
+    List<RDLCTestModel_CPMS> reports;
 
-    reports = DBLib.GetDatas(10000);
+    reports = DBLib_CPMS.GetDatas(10000);
 
     var rdlcPath = @$"C:\VS\GitHub\RDLC_ExportTest\RDLC_ExportTest\Report1.rdlc";
     var savePath = $"{AppDomain.CurrentDomain.BaseDirectory}File/Image{DateTime.Now.ToString("yyyyMMddHHmmssfff")}";

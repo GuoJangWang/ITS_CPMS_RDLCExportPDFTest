@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Report1.rdlc">
+    <EmbeddedResource Include="RDLCTemp\Report1.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -23,6 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DataSet\CPMS.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CPMS.xsd</DependentUpon>
+    </Compile>
     <Compile Update="DataSet\DataSet1.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -31,6 +36,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="DataSet\CPMS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CPMS.Designer.cs</LastGenOutput>
+    </None>
     <None Update="DataSet\DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>

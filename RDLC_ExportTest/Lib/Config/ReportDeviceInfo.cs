@@ -19,18 +19,18 @@ namespace RDLC_ExportTest.Lib.Config
         /// <summary>
         /// 左邊距 (單位 cm\in)
         /// </summary>
-        public string MarginLeft { get; set; } //= "0.2in";
+        public string MarginLeft { get; set; } = "0in";
         /// <summary>
         /// 右邊距 (單位 cm\in)
         /// </summary>
-        public string MarginRight { get; set; }// = "0.2in";
+        public string MarginRight { get; set; } = "0in";
         /// <summary>
         /// 上邊距 (單位 cm\in)
         /// </summary>
-        public string MarginTop { get; set; } //= "0.2in";
+        public string MarginTop { get; set; } = "0in";
         /// <summary>
         /// 下邊距 (單位 cm\in)
         /// </summary>
-        public string MarginBottom { get; set; }// = "0.2in";
+        public string MarginBottom { get; set; } = "0in";
     }
 }
